@@ -108,28 +108,11 @@ public class RaterPage extends JDialog {
             }
         });
 
-//        System.out.println(MovieDatabase.getTitle("1300854"));
-
-//        a2.setText(MovieDatabase.getTitle("361862"));
-//        loadMovieNames();
-
-
-//        ImageIcon img = new ImageIcon(MovieDatabase.getPoster("1300854"));
-//        a1.setIcon(img);
-
-
-//        buttonCancel.addActionListener(new ActionListener() {
-//            public void actionPerformed(ActionEvent e) {
-//                onCancel();
-//            }
-//        });
-
 
         filterRecommendationsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 double[] rates = new double[10];
-//                System.out.println(comboBox1.getSelectedItem().toString());
                 rates[0] = Double.parseDouble(comboBox1.getSelectedItem().toString());
                 rates[1] = Double.parseDouble(comboBox2.getSelectedItem().toString());
                 rates[2] = Double.parseDouble(comboBox3.getSelectedItem().toString());
@@ -149,32 +132,6 @@ public class RaterPage extends JDialog {
             }
         });
 
-//        getRecommendationsButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent actionEvent) {
-//
-//                double[] rates = new double[10];
-////                System.out.println(comboBox1.getSelectedItem().toString());
-//                rates[0] = Double.parseDouble(comboBox1.getSelectedItem().toString());
-//                rates[1] = Double.parseDouble(comboBox2.getSelectedItem().toString());
-//                rates[2] = Double.parseDouble(comboBox3.getSelectedItem().toString());
-//                rates[3] = Double.parseDouble(comboBox4.getSelectedItem().toString());
-//                rates[4] = Double.parseDouble(comboBox5.getSelectedItem().toString());
-//                rates[5] = Double.parseDouble(comboBox6.getSelectedItem().toString());
-//                rates[6] = Double.parseDouble(comboBox7.getSelectedItem().toString());
-//                rates[7] = Double.parseDouble(comboBox8.getSelectedItem().toString());
-//                rates[8] = Double.parseDouble(comboBox9.getSelectedItem().toString());
-//                rates[9] = Double.parseDouble(comboBox10.getSelectedItem().toString());
-//                MovieRunnerSimilarRatings ref = new MovieRunnerSimilarRatings();
-//
-//
-//                ResultPage rp = new ResultPage(ref.printSimiliarRatings(rates));
-//                rp.pack();
-//                rp.setVisible(true);
-//            }
-//        });
-
-
         // call onCancel() when cross is clicked
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
@@ -190,10 +147,6 @@ public class RaterPage extends JDialog {
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
     }
-
-//    public void loadMovieNames() {
-//
-//    }
 
     private void onCancel() {
         // add your code here if necessary

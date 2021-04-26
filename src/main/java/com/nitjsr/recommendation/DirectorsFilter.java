@@ -2,7 +2,7 @@ package com.nitjsr.recommendation;
 
 import java.util.*;
 
-public  class DirectorsFilter implements Filter {
+public class DirectorsFilter implements Filter {
     private String myDirectors;
 
     public DirectorsFilter(String directors){

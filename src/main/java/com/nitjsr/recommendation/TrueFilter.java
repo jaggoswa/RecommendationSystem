@@ -1,9 +1,8 @@
 package com.nitjsr.recommendation;
 
-public class TrueFilter implements Filter {
-	@Override
-	public boolean satisfies(String id) {
-		return true;
-	}
-
+public class TrueFilter implements Filter{
+    @Override
+    public boolean satisfies(String id) {
+        return true;
+    }
 }

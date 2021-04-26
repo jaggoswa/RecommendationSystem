@@ -8,7 +8,7 @@ public class RatingsTest {
 
     @Test
     public void similarityRatingsTest() {
-        FourthRatings ratings = new FourthRatings();
+        FinalRatings ratings = new FinalRatings();
         ArrayList<Rating> expected = new ArrayList<>();
         expected.add(new Rating("1979320",1383.2));
         expected.add(new Rating("1454468",1263.6));

@@ -10,7 +10,7 @@ import org.apache.commons.csv.*;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class FourthRatings {
+public class FinalRatings {
     private double getAverageByID(String id,int minimalRaters){
         double average =0;
         double total=0;
@@ -31,21 +31,6 @@ public class FourthRatings {
         }
         return average;
 
-    }
-
-    @SuppressWarnings("Duplicates")     //removes duplicated code warning
-    public ArrayList<Rating> getAverageRatings(int minimalRaters){
-        ArrayList<Rating> avgRatingList = new ArrayList<Rating>();
-        ArrayList<String> movies = MovieDatabase.filterBy(new TrueFilter());
-        for(String id:movies){
-            double avg = getAverageByID(id,minimalRaters);
-            if(avg>0.0){
-                Rating currRating = new Rating(id,avg);
-                avgRatingList.add(currRating);
-            }
-        }
-
-        return avgRatingList;
     }
 
     public ArrayList<Rating> getAverageRatingsByFilter(int minimalRaters, Filter filterCriteria)

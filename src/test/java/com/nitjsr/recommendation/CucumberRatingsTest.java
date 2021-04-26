@@ -9,7 +9,7 @@ public class CucumberRatingsTest {
     int numSimilarRaters;
     int minimalRaters;
     ArrayList<Rating> expected;
-    FourthRatings ratings;
+    FinalRatings ratings;
 
     @Given("^rater id,number of similar raters and minimum raters$")
     public void rater_id_number_of_similar_raters_and_minimum_raters() {
@@ -30,7 +30,7 @@ public class CucumberRatingsTest {
 
     @Then("^we want to check if we are getting correct recommendations in sorted order$")
     public void we_want_to_check_if_we_are_getting_correct_recommendations_in_sorted_order() {
-        ratings = new FourthRatings();
+        ratings = new FinalRatings();
         ArrayList<Rating> actual = ratings.getSimilarRatings("65",6,5);
         assertEquals(expected,actual);
     }

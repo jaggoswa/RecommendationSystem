@@ -22,10 +22,15 @@ public class MovieDatabase {
     }	
 
 	
-    private static void loadMovies(String filename) {
-        FirstRatings fr = new FirstRatings();
-        ArrayList<Movie> list = fr.loadMovies(filename);
-        for (Movie m : list) {
+    private static void loadMovies(String filename){
+        // process every record from csv file
+        FileResource fr = new FileResource(filename);
+        ArrayList<Movie> movieList = new ArrayList<Movie>();
+        for(CSVRecord record : fr.getCSVParser()) {
+            Movie currMovie = new Movie(record.get("id"), record.get("title"), record.get("year"), record.get("genre"), record.get("director"), record.get("country"), record.get("poster"), Integer.parseInt(record.get("minutes")));
+            movieList.add(currMovie);
+        }
+        for (Movie m : movieList) {
             ourMovies.put(m.getID(), m);
         }
     }
